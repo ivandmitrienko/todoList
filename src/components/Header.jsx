@@ -9,7 +9,6 @@ export default function Header() {
 
   const quantityRemainTasks = quatityTasks.filter((task)=>task.isChecked === false)
 
-   
   return (
     <div className='header'>
       <div className ='tasks'>

@@ -2,15 +2,14 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import Checkbox from './Checkbox';
 import './Tasks.css';
+import { REMOVE_TASK } from './actions.js'
 
 export default function Tasks({ task }) {
 
   const dispatch = useDispatch();
 
   const deleteTask = () => {
-
-    dispatch({type: 'REMOVE TASK', task: task.id});
-
+    dispatch({type: REMOVE_TASK, task: task.id});
   }
 
   return (

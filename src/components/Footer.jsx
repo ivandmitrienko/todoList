@@ -1,5 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import { ADD_TASK } from './actions.js'
 import './Footer.css';
 
 export default function Footer() {
@@ -11,15 +12,11 @@ export default function Footer() {
   const addTask = () =>{
 
     if(youText.current.value) {
-      dispatch({type: 'ADD TASK', task: {text: youText.current.value, id: Date.now(), isChecked: false}});
+      dispatch({type: ADD_TASK, task: {text: youText.current.value, id: Date.now(), isChecked: false}});
       youText.current.value = '';
     }
 
   }
-
- 
-  
-
 
   return (
     <div className='footer'>
